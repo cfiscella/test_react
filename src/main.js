@@ -6,7 +6,7 @@ const vite = Object.entries(import.meta.env).filter(([k]) => k.startsWith("VITE_
 const title = !__ENV_FILE__ ? "❌ no .env file" : keys.length ? "✅ .env found" : "⚠️ .env is empty"
 
 document.querySelector("#app").innerHTML = `
-  <h1>${title}abc123</h1>
+  <h1>${title}abc123456</h1>
   <p>${keys.length} variable${keys.length === 1 ? "" : "s"} in the project's <code>.env</code>, read when the server started (${__STARTED_AT__}).</p>
   <h2>Keys in .env</h2>
   <ul>${keys.map(k => `<li><code>${k}</code></li>`).join("") || "<li><em>none</em></li>"}</ul>
